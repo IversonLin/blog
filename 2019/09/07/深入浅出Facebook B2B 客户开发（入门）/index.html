@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="keywords" content="Lin, Lin's Blog"><meta name="description"><title>深入浅出Facebook B2B 客户开发（入门） | Lin's Blog</title><meta name="google-site-verification" content="Jy3JXRafypnpRjoRcOSHg7kTdZ4kX0XB-ZRTba1iAe8"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=1.5.2"><link rel="icon" href="/images/favicon.png?v=1.5.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/favicon.png?v=1.5.2" type="image/png" sizes="32x32"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=1.5.2"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><script src="https://www.googletagmanager.com/gtag/js?id=UA-130557758-4" async></script><script>if (window.location.hostname !== 'localhost') {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'UA-130557758-4');
+}</script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontawesome: {"prefix":"fa"},
+  sidebar: {"offsetTop":"30px","renderTocDepth":4},
+  back2top: {"enable":true},
+  reward: true,
+  fancybox: false,
+  zoom_image: {"enable":true,"mask_color":"rgba(0,0,0,0.6)"},
+  gallery_waterfall: undefined,
+  lazyload: undefined,
+  pjax: undefined,
+  external_link: {"icon":{"enable":true,"name":"external-link"}},
+  shortcuts: {"switch_post":false},
+  prompt: {"copy_success":"复制成功","copy_error":"复制失败","creative_commons":"知识共享","copy_button":"点击复制"}
+};
+
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/categories/"><i class="fa fa-th"></i>分类</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/tags/"><i class="fa fa-tags"></i>标签</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/about/"><i class="fa fa-user"></i>关于</a></div></div><div class="header-nav-search"><i class="fa fa-search"></i><span>搜索</span></div></div></nav><div class="header-info" style="background: url(https://cdn.pixabay.com/photo/2016/12/19/08/39/mobile-phone-1917737_960_720.jpg) no-repeat center/cover;"><div class="header-info-inner"><div class="header-info-title">Lin's Blog</div><div class="header-info-subtitle">Nothing to Share</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content"><div class="post"><header class="post-header"><h1 class="post-header-title">深入浅出Facebook B2B 客户开发（入门）</h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-09-07</span></span><span class="post-header-meta-word-count"><i class="fa fa-file-word-o"></i><span>字数统计 </span><span>5.1k</span></span><span class="post-header-meta-reading-time"><i class="fa fa-clock-o"></i><span>阅读时长 </span><span>26m</span></span></div></header><div class="post-body"><p>Facebook对于一个营销人员来说到底是一个怎样的存在？一个大约每天每人可以在上面消耗50分钟的社区，意味着的流量价值究竟有多少？意在构建私域流量的B2B商家，究竟可以从Facebook上筛选多少属于自己的有价值流量？</p>
+<a id="more"></a>
+<p>流连于Facebook的人，大多数人所做的事情不过是吸猫，视频猎趣，政治立场掐架，以及阅读“薛定谔的新闻”。</p>
+<p>乍一看，对于开发B端客户，这些人根本没有存在开发的价值，甚至每一分钱的广告费都是浪费钱。是的，<strong>Facebook就是这么烦人，让你觉得毫无意义的同时，还让所有营销人员无法忽视，因为它可能是世界上最快让一个品牌享誉世界以及构建品牌信任的地方。</strong> 传统意义的品牌价值传播构建在产品链或者曝光量，而在社区内，则是人们从一个信任的地方遇见一个品牌，然后认识它，喜欢它，信任它，与之合作，直至所有的价值消失其中。</p>
+<p><strong>这是Facebook让营销人员和品牌方所趋之若鹜的地方，但，也要明白，这也是带来梦魇一般折磨的销售漏斗。</strong></p>
+<p>对于很多做Facebook营销的人来说，很多时候似乎做了很多很有趣的事情，然而，很多事情却说不出一个所以然。也许正在做的事情是世界上最酷的——通过简短的文字和图片创造了价值；也许，并不知道自己真的在做什么。</p>
+<p>这个短小的文字就旨在厘清到底哪些东西是在开发客户的时候有价值，而什么时候却是无用功。<strong>涉及到所谓的效果的言论，必须做一个无责任声明，以下文字仅作参考，不对任何使用以下方式造成的结果负责。</strong></p>
+<p>以下的文字策略主要涉及三个部分：</p>
+<ol>
+<li>了解所需要开发的受众的画像</li>
+<li>创造有意义的内容与目标客户产生共鸣</li>
+<li>合理地安排Facebook广告预算</li>
+</ol>
+<p><em>了解欲开发的客户并且用实质的内容与客户产生共鸣，将有效的预算能够利用广告与客户创建有效的连接，然后就是有效的广告转化。</em></p>
+<blockquote>
+<p>有价值的产品和服务始终是让营销存活的基础</p>
+</blockquote>
+<p>作为品牌方本身或者企业本身，很容易地陷入“自我感动”陷阱，认为自己已经创造了无以伦比的产品或者提供无法企及的服务。于是他们很喜欢在Facebook上说一些看起来很有道理实际上没有任何价值的话语：</p>
+<ul>
+<li>试试我们的产品吧</li>
+<li>赶紧联系我们获取报价吧</li>
+<li>来给我们的页面点赞吧</li>
+<li>购买我们的最棒的产品吧</li>
+<li>订阅我们的信息吧</li>
+</ul>
+<p>这些话语在正常的话术环境下没有任何的问题，甚至是合理的推广自己的品牌的方式。在一个囊括数十亿人群的社区，这样的话语便会产生一个直接的回应：<em>为什么？</em> 毕竟那些吸猫族们并不是你的亲朋，为什么他们要在自己的时间线上分享一些跟自己毫无关联的事物呢？</p>
+<p>所有营销都没有办法逃离一个原则：<strong>永远记住你为品牌受众创造价值才能够赢得青睐。</strong> 简单来说，就是无论所言涉及产品还是服务，重要的是你能够提供什么，并且通过这些价值来引导他们参与到你的品牌建设计划之内。</p>
+<p><strong>高品质的内容是其中一种最为直接的能够引导客户参与其中的方式。</strong> 但这并不意味着你必须创造原创的内容（当然，前提是所有的内容不能够侵犯他人的权利以及违反Facebook社区的规范），而是要创造能够引起共鸣的内容，也许这些内容是具有争议的，也许是有趣的，也许这些内容是负面的。这个取决于品牌所触及的客户群体。</p>
+<p>怎么知道哪些内容才是有效内容呢？首先，需要了解你的品牌目的以及哪些品牌内容是你所希望能够引导人群参与其中的，然后便可以反复提供如此有价值的内容给所能够触及的人群。这个过程需要不断的测试，不管使用A/B测试还是其他什么测试方式。</p>
+<p>那有哪些方式可以更快地得到测试的结果呢？以下有一些通常会使用到的方式：</p>
+<ul>
+<li>研究竞争对手的广告内容以及置顶内容。可以尝试将一些内容转移到自己的主页上，看看可能会发生什么事。</li>
+<li>做一个详尽的计划。把具备吸引力的内容做一个详尽的长期的计划，构建内容体系。毕竟，没有人能满足所有人的口味，哪怕是《西游记》或者《权力的游戏》都会有人不喜欢。</li>
+<li>找到品牌或者产品的最佳着陆点，然后尝试用内容持续影响这个范围的人群。简单来说，就是找出谁喜欢什么内容，在哪里愿意参与到内容中来。这很可能源自A/B测试的结果，也很可能源自某些帖子的参与度。</li>
+</ul>
+<blockquote>
+<p>遵循Facebook的规则，然后再讨论品牌的规则</p>
+</blockquote>
+<p>显然，这是避免账号被莫名其妙删除，链接被莫名其妙屏蔽的最佳方式。</p>
+<p>Facebook的影响力怕是大到让世界上有一半的企业都想成为的对象，也是另一把企业想要弄死的对象。在你还没能够成为Facebook之前，也别想着弄死它，所以，别想着试图破坏它的规则，要不然，你的账号活不到你想要的那一天。</p>
+<p>遵循Facebook的规则，主要来自几个方面：</p>
+<ul>
+<li>能够在Facebook完成的东西，尽可能不要想着从别的地方来。能够在Facebook上传视频和发布长文，就不要想着Youtube和Blog。</li>
+<li>遵循Facebook的趋势，而不是活在过去的荣光。当Facebook的帖子充满视频的时候，就不要满足于图片带来的快感。而现在？视频直播是正在火爆的点。</li>
+<li>别拿品牌规则当作Facebook的规则。某些品牌并不适合在Facebook存活下去，不仅仅因为价值理念或者所站立场，而是自我感觉良好地以为自己在为Facebook添彩却与之同时破坏Facebook社区规则。</li>
+</ul>
+<blockquote>
+<p>速推帖子：用钱来换取初期的呼吸权</p>
+</blockquote>
+<p>广告从来都是最快确认哪种形式最为有效的方式。<strong>速推帖子能够加快确认内容的参与性，并且让品牌更快地获取社区的流量。</strong></p>
+<p>速推帖子基础的内容是产生有价值的帖子，而之后则是利用Facebook的定位工具来进行人群定位。</p>
+<p>如果你想要对一个“在过去30天有关注过项链，居住在美国洛杉矶，每年收入超过$40K,习惯使用信用卡在线购物的拥有大学学位的已婚女性”展示广告，这基本不是什么太大的问题。</p>
+<p>基于兴趣的定位只是一种最为基础的方式。接下来将会看看不同类型的受众群体应该匹配什么样的广告。</p>
+<ul>
+<li><p>有许多企业在瞄准竞争对手之后，便省去定位受众的步骤，直接以竞争对手的粉丝作为受众展示广告。这可以在Facebook广告管理系统中的兴趣输入主页的名称，如果可以匹配，便可以使用该页面进行定位，并且向这些人展示广告。然而，这并不是每个页面都能够有效。如果竞争对手的知名度和活跃度有限，其实也不值得如此操作。竞争对手的页面是否能够作为推广的方向，只能够测试。当然，你还可以通过定位与竞争对手的关注者或者相关的页面来扩展你的投放范围，以增加成功的可能性。</p>
+</li>
+<li><p>提高帖子的互动来增加粉丝。粉丝本身已经参与到你的帖子，所以他们更愿意参与到帖子中来，而对于那些非粉丝的人群，则愿意参与到那些有粉丝而非没有粉丝的帖子中。在前期粉丝数少的时候，如何打破这个矛盾状态需要做的只有一个：提供有价值的内容，将路人甲转化成为粉丝，通过他们在帖子下的参与吸引更多人的参与。这里最佳的方式显然是通过速推帖子来实现。以下是一些小技巧：<br></p>
+<ol>
+<li>第一步：推送帖子给已经点赞页面的人群 —— 更愿意参与到你的页面活动的人群<br></li>
+<li>第二步: 向喜欢你的页面的人的朋友推荐 —— 围观观众</li>
+<li>第三步：通过定位选择来推动具体展示的人群 —— 路人甲们<br></li>
+</ol>
+</li>
+</ul>
+<p><em>如果你不太想一开始花费更多的价钱来测试一个帖子的话，可以尝试使用右侧广告位来进行测试，而不是Newsfeed或者其他的价格更为昂贵的广告位置。很多人认为右侧广告位就是一个鸡肋，实际上，说这句话之前最好测试过。</em></p>
+<blockquote>
+<p>通过邀请帖子点赞来增加粉丝数量</p>
+</blockquote>
+<p>如何获取粉丝数量永远都是Facebook运营者的一个难题。Facebook本身已经提供了一个思路，那就是通过邀请更多人来点赞。有些人可能会参与到你发布的内容中，但通常不会花时间去主页点赞。对于在移动设备的人来说，更是如此。</p>
+<p>通过邀请那些人来为帖子点赞，你需要点击以下即可以和他们获得联系。当然，你不会想着一个一个人地来邀请。所以你可以通过一些方式来实现它。</p>
+<ul>
+<li><p>通过脚本一键式达成帖子点赞邀请。<br><br>首先，点击你的一篇帖子，注意需要加载完成。然后接下来打开浏览器的开发者工具，然后将以下的代码粘贴到控制台中，按确定键。</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buttons; </span><br><span class="line">buttons = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'_42ft'</span>); </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;buttons.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(buttons [i] .getAttribute(<span class="string">'ajaxify'</span>)) != <span class="literal">null</span>）&#123;</span><br><span class="line">        <span class="keyword">if</span>(buttons [i] .getAttribute(<span class="string">'ajaxify'</span>)).indexOf(<span class="string">'invite'</span>)!== <span class="number">-1</span>)&#123;</span><br><span class="line">            buttons [i] .click(); </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>使用Chrome的插件邀约<br><br>当然，如果你不想搞清楚上面那一串东西究竟做了什么，那么有一个更为简单的方式就是使用浏览器来操作这个事情。</p>
+<p>  你可以点击这个链接，为Chrome浏览器安装一个一键邀约的插件：<span class="external-link"><a href="https://chrome.google.com/webstore/detail/invite-all-friends-for-fa/iangljcnfgklhlhjkokndlemjddgoifd" target="_blank" rel="noopener">Invite All Friends for Facebook</a><i class="fa fa-external-link"></i></span></p>
+</li>
+</ul>
+<p><img src="https://lh3.googleusercontent.com/Z7lm4g3COKTzePY66YKON3y7bKsJP2x9s-8YU78p2wigcvddMLoGu-oN8qeDvNhBO-0W6MlP=w640-h400-e365" alt="Invite All Friends for Facebook™"></p>
+<blockquote>
+<p>利用比对广告帖子来推动主页流量增长</p>
+</blockquote>
+<p>流量的增长是一个网站或者主页维续的基本，而带动主页流量的最快速的内容在Facebook上，那只能是广告。此处所说的广告与上文所说的速推帖子不一样，此处的广告并不是出现在时间线的内容。</p>
+<p>广告测试内容与受众的匹配度以及带动内容的参与度。通过优化这些内容，通过A/B测试进行测试，到底哪些内容可以在较低的费用即能够带动更多的流量流入。广告允许你向不同的目标受众投放多种广告，你可以使用广告对诸多内容进行A/B测试：</p>
+<ul>
+<li>哪个照片更受欢迎</li>
+<li>哪个视频的观看转化更高</li>
+<li>哪些受众定位更合理</li>
+<li>哪些页面的转化和留存更高</li>
+</ul>
+<p>你可以一天投放数十个广告，并且在一个觉得合适的时间内做出最优的选择。</p>
+<blockquote>
+<p>Pixel的力量超乎你的想象</p>
+</blockquote>
+<p>Pixel是Facebook在网站上安装的一个追踪脚本，配备了三个流量接口：</p>
+<ol>
+<li>跟踪网站访问<br><br>Pixel能够帮助向访问过网站的用户展示广告，并且可以根据浏览过的时长来进行呈现。比如说，过去24小时内访问过网站的人，或者访问过某个特定页面的人群。</li>
+<li>跟踪网站转化情况<br><br>Pixel 能够让你针对网站设置不同的转化事件。包括浏览，注册，订阅，信息之类</li>
+<li>创建类似受众<br><br>Facebook将收集访问的用户的信息创建与该元信息相似的人群，带来更多可能性的转化。</li>
+</ol>
+<p>显而易见的，Pixel在网站访问和转化的时候可以收集的数据越多，数据就越准确，以及基于该数据扩展的类似群众也就越具有转化的可能性。给网站安装了Facebook Pixel之后，可以通过Chrome浏览器的插件<span class="external-link"><a href="https://chrome.google.com/webstore/detail/facebook-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc?hl=en" target="_blank" rel="noopener">Facebook Pixel Helper</a><i class="fa fa-external-link"></i></span>，以查看观察是否安装成功。当然，可以直接通过Facebook Ads Manager菜单中关于Pixel部分来查看是否安装成功。<br><img src="https://lh3.googleusercontent.com/taclDmIStQO2LTe59MsfXvUcHUp2uEdmkx3rvdVtT_PgchsUUCta__MqymHOc-CfzR2OoBp0uQ=w640-h400-e365" alt="Facebook Pixel Helper"></p>
+<blockquote>
+<p>设置受众群体<br></p>
+</blockquote>
+<p>任何广告的成功都需要基于一个原则：需求匹配。也就是说，找到合适的人展示合适的广告，即便在Facebook，这个基本原则也不能够违背。如果你之前接触过Facebook，你可能已经听过很多人说Facebook可以定位到某个人之类的方式。</p>
+<p>在深入探讨如何定位更为细微的人群之前，需要确认广告目标以及匹配它的最佳方式，到底是单独使用还是结合使用。</p>
+<ul>
+<li><p>自定义受众群体<br><br>通过自定义受众，你可以将已经有相互关联的人创建为一个目标受众。你可以从以下的方式来创建受众群体：</p>
+<ol>
+<li>电子邮件</li>
+<li>Pixel捕获的访客</li>
+<li>在网站上完成某个事件的人群，比如订阅，加入购物车等</li>
+<li>在Facebook上与主页互动过的人</li>
+</ol>
+</li>
+<li><p>类似受众<br><br>类似受众，即允许你根据已经有的元数据进行用户类型扩展形成的一组人群。它允许通过你已有的客户资料，匹配Facebook已有的用户信息，扩展用户群体，较高的覆盖范围，同时保持较高的针对性。<br>同样的，可以从以下的一些方面来创建类似受众：</p>
+<ol>
+<li>Pixel捕获的用户</li>
+<li>根据电子邮件创建的人群用户</li>
+</ol>
+<p><em>为了让Facebook能够较为准确地匹配类似受众，元数据应该尽可能地增加，至少应该为2500人，或者更多。</em></p>
+</li>
+<li><p>兴趣<br><br>兴趣点是广告投放定位最为常用的定位方式，而且Facebook本身也基于社区本身的兴趣内容提供足够多（但并且全部覆盖）的受众兴趣点。这些兴趣点允许进行交叉操作，这样可以让你的受众能够更为具体。比如说，定位一个喜欢滑板同时又是一个建筑师的人，那么可以选择重叠兴趣取交集。</p>
+</li>
+<li><p>排除受众<br><br>兴趣点在定位受众的时候可能会将受众变得较为广泛，而这个时候，就需要使用排除的方式来将人群更加精细。比如说，在投放主页点赞的广告的时候，你是不愿意重复将这类广告显示给那些已经点赞的客户看到的。而这个时候，就应该将这部分人群排除出这个广告的受众群。</p>
+</li>
+</ul>
+<blockquote>
+<p>使用类似受众引导客户参与更多内容</p>
+</blockquote>
+<p>所有的企业或者品牌在Facebook上活动的最重要的初心就是转化。那么类似受众就是满足这个初心最好的方式之一。虽然自定义受众群体能够引导销售进一步提升，但是类似受众是让品牌和企业接触新客户，寻找可能客户的首选。</p>
+<p>类似受众是以前没有关注过的人群，一般由电子邮件或者Pixel数据收集整理形成。如果你希望所得出的类似受众可以更加有效果，可以通过基于客户生命周期价值（CLV）最高的客户。如果你之前并没有使用过CLV来引导营销工作，那么，现在可能是一个尝试的开始，因为它能够告诉你花多少钱来获取和留存客户。这是一个能够了解客户的重要指标之一。</p>
+<p>那么，如果要计算CLV，需要整合哪些数据呢？以下的数据可以作为参考（实际请结合品牌的客户交互形式和方式）：</p>
+<ul>
+<li>平均订单价值（AOV）= 年总收入 / 年订单数量</li>
+<li>购买频率 = 年订单数量 / 年唯一客户数量</li>
+<li>客户价值 = 平均订单价值 / 购买频率</li>
+<li>客户平均寿命</li>
+</ul>
+<p>客户的生命周期值可以简单地通过平均订单价值x购买频率x利润率来进行计算。当然，究竟哪种计算方式最合适，需要结合品牌与企业，关于CLV更多信息可以到<span class="external-link"><a href="https://zh.wikipedia.org/wiki/%E5%AE%A2%E6%88%B7%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%BB%B7%E5%80%BC" target="_blank" rel="noopener">维基百科-CLV</a><i class="fa fa-external-link"></i></span>了解。</p>
+<p>通过CLV得出排名最高地20%，并且通过邮件来创建受众群体，这些客户基本可以认为是最有可能转化的人群。当然，在创建类似受众的时候，需要注意pixel本身抓取的人群，以及扩展过程中所选取的比例，避免过大的扩展导致匹配的人群过于宽泛。</p>
+<blockquote>
+<p>建立重定向的漏斗<br></p>
+</blockquote>
+<p>除了通过创建合适的类似受众来进行客户开发之余，对于在网站或者主页活动过的人群，也可以通过不同的方式来引导回购或者回访。而这些，只需要稍微的引导就可以做得到。</p>
+<p>一个简单的漏斗可以如下显示：<br><br>第7~11天：提供具有诱惑性的内容获取邮件，比如样品或者图册<br><br>第12天~16天：可以提供免费产品，引导转化<br><br>第17天~21天：使用图片或者视频突出产品价值，引导转化<br><br>第21天~25天：使用免费策略来进行引导信息获取</p>
+<p>更长时间的人，基本就已经流失在人群中，只能够从头开始获取了。当然，从不同的企业或者品牌角度中，漏斗的时间可以拉长或者缩短。对于这样的策略的使用，能够有效地在重定向的过程中筛选出有效的客户，召回已经失去的客户。</p>
+<p>除了以上的这些有效方式，当然还有其它很多有用的方式和形式来进行Facebook客户的开发。当然，需要重复一遍，以上内容并不需要我说出来，很多人都能够从更多地方获取，甚至只要你舍得花一点时间尝试理解一下Facebook也就能够得出类似的结论。所以，不对以上所有内容的有效性负责，如果尝试了有效果，或者失败了，可以在评论中回复。当然，如果你有更好的方式也可以在评论中回复。</p>
+<p>最后的最后，广告是玄学，祝好运。</p>
+</div><footer class="post-footer"><div class="post-end"><span>------ </span><span>本文结束，感谢您的阅读</span><span> ------</span></div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-author-name">本文作者: </span><span class="post-copyright-author-value"><a href="https://linblog.space">Lin</a></span></div><div class="post-copyright-link"><span class="post-copyright-link-name">本文链接: </span><span class="post-copyright-link-value"><a href="https://linblog.space/2019/09/07/深入浅出Facebook B2B 客户开发（入门）/">https://linblog.space/2019/09/07/深入浅出Facebook B2B 客户开发（入门）/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-notice-name">版权声明: </span><span class="post-copyright-notice-value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="https://linblog.space/tags/Facebook/">Facebook</a></span><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="https://linblog.space/tags/B2B/">B2B</a></span><span class="post-tags-item"><i class="post-tags-item__i fa fa-tags"></i><a class="post-tags-item__a" href="https://linblog.space/tags/外贸营销/">外贸营销</a></span></div><div class="reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qr"><span class="reward-qr-alipay"><img class="reward-qr-alipay__img" src="/images/alipay.jpg"><div class="reward-qr-alipay-text">支付宝打赏</div></span><span class="reward-qr-wechat"><img class="reward-qr-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qr-wechat-text">微信打赏</div></span></div></div><nav class="paginator"><div class="paginator-post"><div class="paginator-post-prev"><a class="paginator-post-prev__a" href="/2019/10/13/运营，从目标管理开始/"><i class="fa fa-chevron-left"></i><span>营销运营，从目标管理开始</span></a></div><div class="paginator-post-next"><a class="paginator-post-next__a" href="/2018/10/30/阿里国际站的P4P玄学/"><span>阿里国际站的P4P玄学</span><i class="fa fa-chevron-right"></i></a></div></div></nav></footer></div></div><div class="comments" id="comments"><div id="disqus_thread"></div></div></div><aside class="sidebar" id="sidebar"><div class="sidebar-inner"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><div></div></section><!-- ov = overview --><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/favicon.png" alt="avatar"></div><p class="sidebar-ov-author__p">Nothing to Share</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social__item" href="https://twitter.com/iverson54" target="_blank" rel="noopener" data-popover="Twitter" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-twitter"></i></a><a class="sidebar-ov-social__item" href="https://www.instagram.com/iverson.lin/" target="_blank" rel="noopener" data-popover="Instagram" data-popover-pos="up"><i class="sidebar-ov-social__item--icon fa fa-instagram"></i></a><a class="sidebar-ov-social__item" href="https://www.douban.com/people/73402449/" target="_blank" rel="noopener" data-popover="豆瓣" data-popover-pos="up"><span class="sidebar-ov-social__item--logo">豆</span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__a" href="/atom.xml" target="_blank" rel="noopener"><i class="sidebar-ov-feed-rss__a--icon fa fa-rss"></i><span>RSS </span><span>订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state__a posts" href="/archives/"><div class="sidebar-ov-state__a--count">6</div><div class="sidebar-ov-state__a--name">归档</div></a><a class="sidebar-ov-state__a categories" href="/categories/"><div class="sidebar-ov-state__a--count">7</div><div class="sidebar-ov-state__a--name">分类</div></a><a class="sidebar-ov-state__a tags" href="/tags/"><div class="sidebar-ov-state__a--count">11</div><div class="sidebar-ov-state__a--name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="知识共享"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span>你已阅读了 </span><span class="sidebar-reading-info-num">0</span></div><div class="sidebar-reading-line"></div></div></div></aside><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>&copy; 2020</span><span class="fa fa-heart footer-icon"></span><span>Lin.</span></div><div><span>Powered by Hexo</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="progress"></div></div><div class="back2top" id="back2top"><i class="back2top-icon fa fa-rocket"></i></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script>window.addEventListener('DOMContentLoaded', function () {
+  $('.header-nav-search').on('click', function (e) {
+    e.stopPropagation();
+
+    $('body').css('overflow', 'hidden');
+    $('.search-popup')
+      .addClass('show')
+      .velocity('stop')
+      .velocity('transition.expandIn', {
+        duration: 300,
+        complete: function () {
+          $('.search-popup input').focus();
+        }
+      });
+    $('.search-mask')
+      .velocity('stop')
+      .velocity('transition.fadeIn', {
+        duration: 300
+      });
+
+    initSearch();
+  });
+
+  $('.search-mask, .search-close').on('click', function () {
+    closeSearch();
+  });
+
+  $(document).on('keydown', function (e) {
+    // Escape <=> 27
+    if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+      closeSearch();
+    }
+  });
+
+  var isXML = true;
+  var search_path = 'search.xml';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+
+  function initSearch() {
+    $.ajax({
+      url: path,
+      dataType: isXML ? 'xml' : 'json',
+      async: true,
+      success: function (res) {
+        var datas = isXML ? $('entry', res).map(function () {
+          // 将 XML 转为 JSON
+          return {
+            title: $('title', this).text(),
+            content: $('content', this).text(),
+            url: $('url', this).text()
+          };
+        }).get() : res;
+
+        var $input = $('.search-input input');
+        var $result = $('.search-results');
+
+        // 搜索对象（标题、内容）的权重，影响显示顺序
+        var WEIGHT = { title: 100, content: 1 };
+
+        var searchPost = function () {
+          var searchText = $input.val().toLowerCase().trim();
+          // 根据空白字符分隔关键字
+          var keywords = searchText.split(/[\s]+/);
+          // 搜索结果
+          var matchPosts = [];
+
+          // 有多个关键字时，将原文字整个保存下来
+          if (keywords.length > 1) {
+            keywords.push(searchText);
+          }
+
+          // 防止未输入字符时搜索
+          if (searchText.length > 0) {
+            datas.forEach(function (data) {
+              var isMatch  = false;
+
+              // 没有标题的文章使用预设的 i18n 变量代替
+              var title = (data.title && data.title.trim()) || '( 文章无标题 )';
+              var titleLower = title && title.toLowerCase();
+              // 删除 HTML 标签 和 所有空白字符
+              var content = data.content && data.content.replace(/<[^>]+>|\s+/, '');
+              var contentLower = content && content.toLowerCase();
+              // 删除重复的 /
+              var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/, '/');
+
+              // 标题中匹配到的关键词
+              var titleHitSlice = [];
+              // 内容中匹配到的关键词
+              var contentHitSlice = [];
+
+              keywords.forEach(function (keyword) {
+                /**
+                  * 获取匹配的关键词的索引
+                  * @param {String} keyword 要匹配的关键字
+                  * @param {String} text 原文字
+                  * @param {Boolean} caseSensitive 是否区分大小写
+                  * @param {Number} weight 匹配对象的权重。权重大的优先显示
+                  * @return {Array}
+                  */
+                function getIndexByword (word, text, caseSensitive, weight) {
+                  if (!word || !text) return [];
+
+                  var startIndex = 0; // 每次匹配的开始索引
+                  var index = -1;     // 匹配到的索引值
+                  var result = [];    // 匹配结果
+
+                  if (!caseSensitive) {
+                    word = word.toLowerCase();
+                    text = text.toLowerCase();
+                  }
+
+                  while((index = text.indexOf(word, startIndex)) !== -1) {
+                    var hasMatch = false;
+
+                    // 索引位置相同的关键词，保留长度较长的
+                    titleHitSlice.forEach(function (hit) {
+                      if (hit.index === index && hit.word.length < word.length) {
+                        hit.word = word;
+                        hasMatch = true;
+                      }
+                    });
+                    startIndex = index + word.length;
+                    !hasMatch && result.push({ index: index, word: word, weight: weight });
+                  }
+
+                  return result;
+                }
+
+                titleHitSlice = titleHitSlice.concat(
+                  getIndexByword(keyword, titleLower, false, WEIGHT.title));
+                contentHitSlice = contentHitSlice.concat(
+                  getIndexByword(keyword, contentLower, false, WEIGHT.content));
+              });
+
+              var hitTitle = titleHitSlice.length;
+              var hitContent = contentHitSlice.length;
+
+              if (hitTitle > 0 || hitContent > 0) {
+                isMatch = true;
+              }
+
+              if (isMatch) {
+                ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                  // 按照匹配文字的索引的递增顺序排序
+                  hit.sort(function (left, right) {
+                    return left.index - right.index;
+                  });
+                });
+
+                /**
+                  * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+                  * @param {String} text 原文本
+                  * @param {Array} hitSlice 匹配项的索引信息
+                  * @param {Number} start 开始索引
+                  * @param {Number} end 结束索引
+                  * @return {String}
+                  */
+                function highlightKeyword (text, hitSlice, start, end) {
+                  if (!text || !hitSlice || !hitSlice.length) return;
+
+                  var result = '';
+                  var startIndex = start;
+                  var endIndex = end;
+
+                  hitSlice.forEach(function (hit) {
+                    if (hit.index < startIndex) return;
+
+                    var hitWordEnd = hit.index + hit.word.length;
+
+                    result += text.slice(startIndex, hit.index);
+                    result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                    startIndex = hitWordEnd;
+                  });
+                  result += text.slice(startIndex, endIndex);
+
+                  return result;
+                }
+
+                var postData = {};
+                // 文章总的搜索权重
+                var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+                // 标记匹配关键词后的标题
+                var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+                // 标记匹配关键词后的内容
+                var postContent;
+                // 显示内容的长度
+                var SHOW_WORD_LENGTH = 200;
+                // 命中关键词前的字符显示长度
+                var SHOW_WORD_FRONT_LENGTH = 20;
+                var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+                // 截取匹配的第一个字符，前后共 200 个字符来显示
+                if (contentHitSlice.length > 0) {
+                  var firstIndex = contentHitSlice[0].index;
+                  var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                  var end = firstIndex + SHOW_WORD_END_LENGTH;
+
+                  postContent = highlightKeyword(content, contentHitSlice, start, end);
+                } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                  postContent = content.slice(0, SHOW_WORD_LENGTH);
+                }
+
+                postData.title = postTitle;
+                postData.content = postContent;
+                postData.url = postURL;
+                postData.weight = postWeight;
+                matchPosts.push(postData);
+              }
+            });
+          }
+
+          var resultInnerHtml = '';
+
+          if (matchPosts.length) {
+            // 按权重递增的顺序排序，使权重大的优先显示
+            matchPosts.sort(function (left, right) {
+              return right.weight - left.weight;
+            });
+
+            resultInnerHtml += '<ul>';
+            matchPosts.forEach(function (post) {
+              resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+              resultInnerHtml += post.title;
+              resultInnerHtml += '</a><div class="search-results-content">';
+              resultInnerHtml += post.content;
+              resultInnerHtml += '</div></li>';
+            });
+            resultInnerHtml += '</ul>';
+          } else {
+            resultInnerHtml += '<div class="search-results-none"><i class="fa fa-meh-o"></i></div>';
+          }
+
+          $result.html(resultInnerHtml);
+        };
+
+        $input.on('input', searchPost);
+        $input.on('keypress', function (e) {
+          if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+            searchPost();
+          }
+        });
+      }
+    });
+  }
+
+  function closeSearch () {
+    $('body').css('overflow', 'auto');
+    $('.search-popup')
+      .removeClass('show')
+      .velocity('stop')
+      .velocity('transition.expandOut', {
+        duration: 300
+      });
+    $('.search-mask')
+      .velocity('stop')
+      .velocity('transition.fadeOut', {
+        duration: 300
+      });
+  }
+}, false);</script><script>function loadDisqus () {
+  if (!document.getElementById('disqus_thread')) return;
+  if (window.DISQUS) {
+    DISQUS.reset({
+      reload: true,
+      config: function () {
+        this.page.url = 'https://linblog.space/2019/09/07/深入浅出Facebook B2B 客户开发（入门）/';
+        this.page.identifier = '2019/09/07/深入浅出Facebook B2B 客户开发（入门）/';
+        this.page.title = '深入浅出Facebook B2B 客户开发（入门）';
+      }
+    });
+  } else {
+    var d = document;
+    var sc = d.createElement('script');
+    var se = d.createElement('script');
+
+    if (true) {
+      sc.src = 'https://lin-5.disqus.com/count.js';
+      sc.id = 'dsq-count-scr';
+      sc.async = true;
+      if (false) { sc.setAttribute('data-pjax', ''); }
+      (d.head || d.body).appendChild(sc);
+    }
+
+    se.src = 'https://lin-5.disqus.com/embed.js';
+    (d.head || d.body).appendChild(se);
+  }
+}
+
+if (false) {
+  loadDisqus();
+} else {
+  window.addEventListener('DOMContentLoaded', loadDisqus, false);
+}</script><script src="/js/utils.js?v=1.5.2"></script><script src="/js/stun-boot.js?v=1.5.2"></script><script src="/js/scroll.js?v=1.5.2"></script><script src="/js/header.js?v=1.5.2"></script><script src="/js/sidebar.js?v=1.5.2"></script><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1581952578609')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body></html>
