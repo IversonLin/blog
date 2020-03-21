@@ -28,11 +28,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/10/18/一张纸解决一个项目，去芜存菁直面OGSM/');
 
+  precacheUrls.push('/2020/03/21/全网营销运营，一个营销矩阵全搞定/');
+
   precacheUrls.push('/2018/01/05/时间管理者的时间都去哪了？/');
 
   precacheUrls.push('/2019/09/07/深入浅出Facebook B2B 客户开发（入门）/');
-
-  precacheUrls.push('/2019/12/08/独立站，商家的累赘还是牌面？/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
