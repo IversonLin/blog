@@ -30,9 +30,9 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/03/21/全网营销运营，一个营销矩阵全搞定/');
 
-  precacheUrls.push('/2018/01/05/时间管理者的时间都去哪了？/');
+  precacheUrls.push('/2020/04/18/全网营销运营，创建适用于B2B用户的内容/');
 
-  precacheUrls.push('/2019/09/07/深入浅出Facebook B2B 客户开发（入门）/');
+  precacheUrls.push('/2018/01/05/时间管理者的时间都去哪了？/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
