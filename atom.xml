@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linblog.space/"/>
-  <updated>2020-06-07T11:07:46.367Z</updated>
+  <updated>2020-06-14T03:30:38.684Z</updated>
   <id>https://linblog.space/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Facebook营销：挖掘与精准使用Facebook的兴趣人群</title>
+    <link href="https://linblog.space/2020/06/14/Facebook%E8%90%A5%E9%94%80%EF%BC%9A%E6%8C%96%E6%8E%98%E4%B8%8E%E7%B2%BE%E5%87%86%E4%BD%BF%E7%94%A8Facebook%E7%9A%84%E5%85%B4%E8%B6%A3%E4%BA%BA%E7%BE%A4/"/>
+    <id>https://linblog.space/2020/06/14/Facebook%E8%90%A5%E9%94%80%EF%BC%9A%E6%8C%96%E6%8E%98%E4%B8%8E%E7%B2%BE%E5%87%86%E4%BD%BF%E7%94%A8Facebook%E7%9A%84%E5%85%B4%E8%B6%A3%E4%BA%BA%E7%BE%A4/</id>
+    <published>2020-06-13T16:00:00.000Z</published>
+    <updated>2020-06-14T03:30:38.684Z</updated>
+    
+    <content type="html"><![CDATA[<p>Facebook的兴趣点可以说食Facebook广告投放的基准点，兴趣点的精准与否，决定了广告的成功与失败。在很多低阶的Facebook广告教学中会提及到用户定位和兴趣点确定，然后将兴趣点进行组合，或者并列组合或者交集组合，形成投放的用户人群。</p><a id="more"></a><p>然而，在Facebook上，特别是使用中文来搜寻兴趣点的时候，容易出现一些翻译上带来的困扰，因此，在做兴趣点定位的时候，尽可能使用英文。使用英文虽然可以降低出错的风险，却也可能因为同一个兴趣点属于不同的范畴而投放错误的人群。比如Agricultural engineering，这个兴趣点的范畴属于教育，而非工程类，那么在投放的过程中，可能就会出现误判。Facebook针对兴趣点的范畴，对部分的内容是有说明的，会提示是否属于电视节目，电影之类的。但是对于大部分的兴趣内容并不会有提示，比如前文提及到的Agricultural engineering。</p><p>对于Facebook广告运营者而言，要找到一个兴趣点本身并不会太难，大抵可以从以下的一些方法着手：产品词本身，关联匹配词，应用场景词等。而在找出所有的兴趣点，并且确认这类兴趣点符合预期投放的产品范畴，那么就需要花一点时间来验证了。</p><p>Facebook本身显然是不希望运营者花太多时间来琢磨这些细枝末节。Facebook提供了一个查找所有兴趣点的工具给Facebook广告主。这个工具可以较为清晰地展示出关键字关联的所有的兴趣点，并且对大部分的兴趣点提及其所属范畴，这样子就可以让广告主们在投放广告的过程中节省大部分的时间和精力来思考所用的词语是否精准了。</p><p>如何使用这个工具呢？首先来看看这个工具最终长什么样。<br>  <img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Adinterests.png" alt="Ads-interests"></p><p>那么怎么样来生成这么一个关键字的列表呢？以下是一些简单的操作步骤：</p><ul><li><p>注册为Facebook的开发者，创建属于自己的APP<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/create-App.PNG" alt="Create Your App"></p></li><li><p>获取你的Token<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/token.PNG" alt="Create Your App"></p></li><li><p>调用Facebook提供的API，针对需要的广告兴趣点来调整关键字即可</p><p><span class="external-link"><a href="https://graph.facebook.com/search?type=adinterest&amp;q=[%22books%22]&amp;limit=10000&amp;locale=en_US&amp;access_token=你的token" target="_blank" rel="noopener">https://graph.facebook.com/search?type=adinterest&amp;q=[%22books%22]&amp;limit=10000&amp;locale=en_US&amp;access_token=你的token</a><i class="fa fa-external-link"></i></span></p><p>其中，%22books%22中的兴趣点更换为自己所需要的兴趣点，limit指获取的数量</p></li><li><p>复制URL到浏览器打开，查看关键字可投内容的全部的兴趣点</p></li></ul><p>在这个过程中，需要注意的是，记得保存好自己的Token。关键字的链接上，只能输入单个单词，而非短语或者句子，以及该接口只支持英文搜索。</p><p>通过Facebook的兴趣点列表找出所有的兴趣点之后，需要进行兴趣点的组合和排列，这个就是寻常所见的内容，别的文本中有谈及，这里就不再赘述。兴趣点是Facebook广告的基准线，这一步走好了，广告基本就可以预测个大概了。</p><p>最后的最后，广告的本质是投资，投资有风险，入市需谨慎。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Facebook的兴趣点可以说食Facebook广告投放的基准点，兴趣点的精准与否，决定了广告的成功与失败。在很多低阶的Facebook广告教学中会提及到用户定位和兴趣点确定，然后将兴趣点进行组合，或者并列组合或者交集组合，形成投放的用户人群。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="Facebook" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/Facebook/"/>
+    
+    
+      <category term="Facebook" scheme="https://linblog.space/tags/Facebook/"/>
+    
+      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读-拒看新闻的生活艺术</title>
@@ -57,22 +84,22 @@
     </summary>
     
     
-      <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
-    
       <category term="修炼运营" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/"/>
+    
+      <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
     
       <category term="全网营销" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/%E5%85%A8%E7%BD%91%E8%90%A5%E9%94%80/"/>
     
       <category term="内容营销" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/%E5%85%A8%E7%BD%91%E8%90%A5%E9%94%80/%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80/"/>
     
     
-      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
-      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
-    
       <category term="营销运营" scheme="https://linblog.space/tags/%E8%90%A5%E9%94%80%E8%BF%90%E8%90%A5/"/>
     
       <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
+    
+      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
     
       <category term="内容营销" scheme="https://linblog.space/tags/%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80/"/>
     
