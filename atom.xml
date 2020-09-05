@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://linblog.space/"/>
-  <updated>2020-06-14T03:30:38.684Z</updated>
+  <updated>2020-09-05T10:41:11.822Z</updated>
   <id>https://linblog.space/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Ads 学习笔记系列：从广告观念到广告上线</title>
+    <link href="https://linblog.space/2020/09/05/Google%20Ads%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97%EF%BC%9A%E4%BB%8E%E5%B9%BF%E5%91%8A%E8%A7%82%E5%BF%B5%E5%88%B0%E5%B9%BF%E5%91%8A%E4%B8%8A%E7%BA%BF/"/>
+    <id>https://linblog.space/2020/09/05/Google%20Ads%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97%EF%BC%9A%E4%BB%8E%E5%B9%BF%E5%91%8A%E8%A7%82%E5%BF%B5%E5%88%B0%E5%B9%BF%E5%91%8A%E4%B8%8A%E7%BA%BF/</id>
+    <published>2020-09-04T16:00:00.000Z</published>
+    <updated>2020-09-05T10:41:11.822Z</updated>
+    
+    <content type="html"><![CDATA[<p>在开始撰写这个系列的文本的之前，有些重要的声明需要说清楚：关于本系列的内容，主观性内容比较多，可能不符合阅读者的使用环境，阅读该系列文本并不能让你的广告得到更好的转化或者推进。如果期许阅读文本而得到广告优化技术的提升，请打入Google Ads团队内部，根据自己的意愿修改广告规则。其次，本系列文本的内容属于写作者自身的学习过程，内容不具备花里胡哨的技巧和灰色操作，基本属于简单到不能再简单的范畴。</p><a id="more"></a><p>本系列文本适用人群：</p><ul><li>对Google Ads感兴趣的人群</li><li>可能是一个希望了解Google Ads皮毛的人群</li><li>也许已经了解了Google Ads,但是还觉得自己菜的人，然后想看看还有没有更菜的以获得优越感的人群</li><li>无聊得就随便看看的人群</li></ul><p>如何使用本系列文本：</p><ul><li>查阅相关官方文本，然后纠正错误的文本。如果你愿意，可以在文本下方评论说明哪些错了，或者哪些过时了，我对此将非常感激。</li><li>质疑主观观点。任何的观点都是有局限的，你要做的是，在阅读的过程中质疑它，然后证明你的说法是对的。</li><li>使用自己的实际数据来验证操作的正确性和错误性。纸上谈兵是我正在做的事情，而你，显然需要实际操作一下，才知道我是不是在说谎。</li><li>忘掉本系列文本所说的内容，更多关注你的产品本身与你的数据，然后总结属于你自己的观点，然后分享给其他需要的人。只有分享更多，才会有更多人了解，你也将会遇到更多更懂广告的人。不要吝惜那些我们都知道的常识，分享你的想法出去吧。</li></ul><p>这将会是一系列大约7篇内容的文本，本文属于第一篇，也是跟广告操作本身最没有关联的一篇。在这一篇文本中，谈论的重点将会在一些我认同的观念上，这些观念，可能来自我对广告的理解，可能来自我对某个人的认同，也可能纯粹是为了拼凑本文字数而得出来的句子。</p><p>首先，我们来谈谈广告本身。众所周知，广告拥有的类型有很多种，从最早的口头叫卖，到后来的纸媒广告，再到后来的电视广告，然后现在的流媒体广告。广告的类型非常非常之多，只是，他们的目标却都只有一个：<strong>让世人知道我的存在，并且为之付出代价</strong>。广告所有达成的目标只有这么一个，因此它所要做的事情其实也只有一个，那就是<strong>说服</strong>。不管你看到的哪一种广告，它都是在尝试说服你去做一件事情，这件事情不管是关注一个账号，或者是分享一篇文章，或者是购买一样物品。<strong>它们所用的内容和形式，都是希望在和受众接触的那一瞬间，建立起信任关系，并且说服对方来付出代价</strong>。如你所知道的，大部分广告都十分露骨地表达了自己的诉求，不管是购买还是其它。</p><p>很可惜，广告作为一种说服的形式，它并没有那么容易被大家接受，因为广告本身是一种<strong>特权</strong>的存在。当一种特权成为一种稀松平常的事物的时候，它的魅力就变得不那么特别了。从广告存在的时候起，它就有别于其他的平常的信息。呐喊声要比寻常聊天的分贝高，在电视播放的时候可以掐断连续播放的节目，可以出现在流媒体节目的初始地方。这些都是广告的特权。平台将自己所拥有的资源，通过交易的形式，让广告主们为之付出代价，然后得到自己所想要的结果。显然，这是一种不对等的交易。因为广告主所能够做到的，并不是平台的所有权操作，而是一种短暂的按照规则的短暂的操作。广告主付出费用，广告平台收取佣金，平台使用者可能会为这些广告买单，可能不会为这些广告买单，这取决于广告平台推荐的规则和广告主的说服能力。</p><p>正如上面所说，平台使用者并不一定会为广告本身买单，<strong>广告的本质是一个投资行为</strong>。投资是讲究投资回报的。广告主在投入金钱之后，对自己的广告的效益将会十分的关注。广告效益取决于广告的目的，不同的广告目的将会导致不同的广告效益关注点。所以，广告除了是一个投资行为，还属于<strong>目标管理行为</strong>。如何通过针对自己的产品或者品牌得出广告的目标，这是一个极为关键的部分。有些人会直接说，我就需要销售，有些会会直接说，我就是要询盘。这类人群投广告的时候，不仅仅是投资行为，已经是大转盘行为了，真的要靠天吃饭了，因为他们还没有明白自己真正的目标在哪里。关于目标管理部分，不在这里展开，在其他的地方有说过。</p><p>当你确认了自己的广告目标之后，是否就可以开始策划一次广告投放了呢？先别着急。经常会看到很多人说，我要投这个广告，投那个广告。或者因为看到别人投广告成功了，然后自己也要开始投放广告。实际上而言，投放广告需要策略，不是盲目行为。你不会因为别人买什么东西，你也去买，你的同行的行为与你的行为本身实际上是独立事件。很多人没有搞明白，自己和同行是独立的两个个体，然后就被忽悠着去投放广告。<strong>记住，属于你的已经属于你，没有属于你的，你可以争取，但不能幻想争取了就能够得到</strong>。别忘了，广告是一种投资行为，你需要做资产规划，你需要做失败打算，你需要有Plan B来补救败局。因此，当你准备确定自己要的目标之后，先问一下自己，我是否真的需要投广告呢？广告最好的结果能给我带来什么呢？广告最坏的结果又是什么呢？广告本身可以如何达成我的目标呢？如果我要达成我的目标，我需要怎么来策划我的广告和实施优化策略呢？这些都是很常见，但是容易被忽略的问题。这些问题，大部分人在操作的过程中都会被忽略，但是这些问题对于新手或者新进门的广告主来说，是有一些小小的帮助的。</p><p>好的，我猜你觉得以上的内容都是无关紧要且啰嗦，你希望可以开始你的广告了，而且你知道你了你的目标，并且知道了你的广告平台选择，你希望通过Google Ads来实现你的远大前程。那么你可以开始进行广告的基本设施铺垫了。</p><p>要创建一个Google Ads的广告账户是一件非常简单的事情，你只需要有一个Google账号就可以开通了。从<span class="external-link"><a href="https://ads.google.com/" target="_blank" rel="noopener">https://ads.google.com/</a><i class="fa fa-external-link"></i></span>访问Google Ads，然后点击Get Started,便可以开始进入到你的广告账号页面。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-00.png" alt="google ads"></p><p>创建广告账户之后，你会看到一个建议你设置广告系列的提示。如果你还没有准备好创建广告，你希望了解更多的广告操作的平台界面之后再进行广告设置的话，那你可以切换页面到专家模式，然后选择跳过广告设置，然后进入账户设置，进行你的广告账单的设置。当你设置完成这一步之后，你就可以开始进行你的广告平台的了解了。 </p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-01.png" alt="建议你投放广告"><br>当你创建好广告账户之后，将会看到官方建议你创建广告系列。你可以选择切换至转接模式，进行更多的选择和操作广告。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-02.png" alt="切换至专家模式，然后跳过广告设置"><br>如果你想要了解一下广告账户之后再创建广告，你可以选择直接创建账号而不创建广告系列。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-03.png" alt="设置账号"><br>这个时候你会跳到广告账户的信息确认的界面，这个时候根据自己的情况来填写你的商家信息，提交之后，你就可以开始进入广告操作的界面了。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-04.png" alt="广告操作界面"><br>恭喜你，等待了几分钟，终于你可以进入到广告后台的操作界面了，接下来，你可以好好熟悉一下广告的界面，然后将自己的广告上线了。</p><p>广告操作界面看起来十分的简单，左边栏是广告系列的合集展示，左侧第二栏是一些常见选项，包括情况的概览，所有的广告系列，广告系列的设置，广告的地理位置，广告更改历史记录，效果目标和广告系列组。右侧就是当你上线广告之后的情况展示，在右上角部分，你可以通过搜索功能来进行广告内容搜索，查看广告报告，以及其他的广告工具和设置。这些设置和工具，会在广告操作的过程中使用到。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-05.png" alt="广告工具与设置"><br>在这个广告操作界面，你可以很清晰地了解到Google Ads为你提供了多少的工具和设置，你可以看到已经听说过很多次的关键字规划师，你可以通过绑定google analytics来看整体网站的数据，还可以通过授权其他账号来管理广告，也可以在预算栏部分看到广告的消费情况。实际上，Google Ads的操作界面是十分简单的，远远要比office套件或者photoshop这些软体的操作按键要少很多，只需要多花点时间多看看，多点点，就大概知道什么意思，并且知道怎么使用了。</p><p>当你大致了解以上的界面，可以开始通过创建一个广告来了解广告创建的过程，并且可以将广告上线。<strong>你不可能通过阅读一份文本或者听一节课来学会广告操作，你需要真的操作广告来学习广告本身</strong>。</p><p>首先，广告的基本架构为广告系列-广告组-广告。我们先从创建广告系列开始，从创建一个新的广告系列，进入广告系列的目标选择。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign.png" alt></p><p>在熟悉过程中，可以随意选择一个广告目标，比如你选择销售或者潜在客户，随意选择一个来进行熟悉。在这个过程中，我们将会选择销售这个目标来进行熟悉。点击销售之后，我们将看到广告系列类型，包含搜索，展示多种类别，而这一次，我们将选择搜索广告来进行展示。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign01.png" alt></p><p>选择了系列之后，填写网站访问次数，并且填写网站链接。关于网站转化，我们后续会说到，暂时这边跳过，进入下一步。</p><p>进入下一步之后，开始设置广告系列，包括广告系列的名称，投放的位置，投放的时间，投放的定位和群体，预算和出价，系列的广告附加信息等等。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign02.png" alt></p><p>广告系列名称可以选用一个能够标识你的广告投放目标的名称即可，主要用于标识和管理；投放的网络指的是广告展示的位置，这里默认选中就好，后续实际上线广告的时候，就需要根据实际情况来选择了。简单来说，这个位置选择越多，你的广告展示的机会就越多，耗费也将会更多。更多的设置，先按照默认设置，后续根据实际的情况调整。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign03.png" alt><br>设置好常规的设置之后，可以对授权群体进行定位和投放。可以根据你的目标市场和语言进行选择投放。还可以对授权群体进行某些具体关键字的定位。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign04.png" alt><br>接下来就是比较关心的广告预算和出价部分了。关于这个部分，你可以填写一个觉得合理的价格，然后出价的方式，可以选择匹配自己的方式。默认选择点击次数，你还可以选择转化次数等等。</p><p><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-campaign05.png" alt><br>设置好出价之后，便可以开始对广告添加一些广告附加信息。这个附加信息的目的是增加广告的覆盖位置。同时可以在广告限制的字数内，呈现更多的广告信息和内容，增加广告的说服力。完成这个部分，便已经结束了相关的广告系列设置，可以进入到广告组的设置了。</p><p>设置广告组是一个比较简单同时却是最为重要的步骤，相比于广告系列设置的整体的内容，广告组设置广告的关键字，这个属于触发搜索广告最为直接的内容。广告关键字的选择，可以根据自己的习惯添加，也可以通过关键字规划师来选择添加。在这个界面上，Google Ads也为我们提供了一些关键字，然后我们自己也可以添加一些，按照所需要的匹配方式来添加进来。右侧是可以看到根据每日预算和当前广告关键字得出的效果。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-group.png" alt></p><p>历经了广告系列和广告组（以及关键字）的设置之后，你距离广告上线也就生下一步了，那就是设置广告本身。广告是直接面对消费者的销售人员，你需要给他打扮得体，因此你的广告也需要显示出你的诚意。如何描述广告语？这个后续会专门文本来探讨这个事情。目前，你可以按照自己的喜好来填写广告语，唯一需要注意的是：<strong>不要超出字数和乱用品牌词，会侵权的！</strong><br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-ad.png" alt></p><p>当你填完这一些之后，你将会得到系统的恭喜，是的，你的广告系列可以上线了。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads-ad02.png" alt></p><p>到此为止，你已经完成了一个广告系列的创建和上线了。当你再一次返回广告管理界面的时候，你会发现左侧的内容增加了很多，这个时候，你可以更好的了解一个广告系列里边涵盖的内容了，并且通过点击进入相对应的内容，了解他们的变化。<strong>记住，如果你还不想跑广告，请暂停你的广告</strong>。<br><img src="https://raw.githubusercontent.com/iversonlin/picforblog/master/img/Google-Ads-Create-ads0.png" alt></p><p>从了解广告的相关的信息到广告上线，已经走了一圈的你，应该可以明白，广告操作本身并不是一件难事，而难的是如何创造有价值的广告。显然，我也在尝试创造有价值的广告，这也是这个系列想要探讨的目标之一，是否能够得出一个正向的结论，还需要时间的等待和检验。</p><p>最后的最后，广告属于投资行为，学习虽无害，投放需谨慎。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在开始撰写这个系列的文本的之前，有些重要的声明需要说清楚：关于本系列的内容，主观性内容比较多，可能不符合阅读者的使用环境，阅读该系列文本并不能让你的广告得到更好的转化或者推进。如果期许阅读文本而得到广告优化技术的提升，请打入Google Ads团队内部，根据自己的意愿修改广告规则。其次，本系列文本的内容属于写作者自身的学习过程，内容不具备花里胡哨的技巧和灰色操作，基本属于简单到不能再简单的范畴。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="Google Ads" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/Google-Ads/"/>
+    
+    
+      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="Google Ads" scheme="https://linblog.space/tags/Google-Ads/"/>
+    
+      <category term="广告" scheme="https://linblog.space/tags/%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>Facebook营销：挖掘与精准使用Facebook的兴趣人群</title>
@@ -84,22 +113,22 @@
     </summary>
     
     
-      <category term="修炼运营" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/"/>
-    
       <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="修炼运营" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/"/>
     
       <category term="全网营销" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/%E5%85%A8%E7%BD%91%E8%90%A5%E9%94%80/"/>
     
       <category term="内容营销" scheme="https://linblog.space/categories/%E4%BF%AE%E7%82%BC%E8%BF%90%E8%90%A5/%E5%85%A8%E7%BD%91%E8%90%A5%E9%94%80/%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80/"/>
     
     
+      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
       <category term="营销运营" scheme="https://linblog.space/tags/%E8%90%A5%E9%94%80%E8%BF%90%E8%90%A5/"/>
     
       <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
     
       <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
-      <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
     
       <category term="内容营销" scheme="https://linblog.space/tags/%E5%86%85%E5%AE%B9%E8%90%A5%E9%94%80/"/>
     
@@ -128,9 +157,9 @@
     
       <category term="营销运营" scheme="https://linblog.space/tags/%E8%90%A5%E9%94%80%E8%BF%90%E8%90%A5/"/>
     
-      <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
-    
       <category term="全网营销" scheme="https://linblog.space/tags/%E5%85%A8%E7%BD%91%E8%90%A5%E9%94%80/"/>
+    
+      <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
     
       <category term="海盗模型" scheme="https://linblog.space/tags/%E6%B5%B7%E7%9B%97%E6%A8%A1%E5%9E%8B/"/>
     
@@ -159,9 +188,9 @@
     
       <category term="Facebook" scheme="https://linblog.space/tags/Facebook/"/>
     
-      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
       <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
     
   </entry>
   
@@ -184,9 +213,9 @@
       <category term="外贸营销" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
     
     
-      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
       <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
     
       <category term="独立站" scheme="https://linblog.space/tags/%E7%8B%AC%E7%AB%8B%E7%AB%99/"/>
     
@@ -215,9 +244,9 @@
     
       <category term="营销运营" scheme="https://linblog.space/tags/%E8%90%A5%E9%94%80%E8%BF%90%E8%90%A5/"/>
     
-      <category term="目标管理" scheme="https://linblog.space/tags/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86/"/>
-    
       <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="目标管理" scheme="https://linblog.space/tags/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86/"/>
     
       <category term="OGSM" scheme="https://linblog.space/tags/OGSM/"/>
     
@@ -246,9 +275,9 @@
     
       <category term="营销运营" scheme="https://linblog.space/tags/%E8%90%A5%E9%94%80%E8%BF%90%E8%90%A5/"/>
     
-      <category term="目标管理" scheme="https://linblog.space/tags/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86/"/>
-    
       <category term="杂谈" scheme="https://linblog.space/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="目标管理" scheme="https://linblog.space/tags/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86/"/>
     
       <category term="OGSM" scheme="https://linblog.space/tags/OGSM/"/>
     
@@ -277,9 +306,9 @@
     
       <category term="Facebook" scheme="https://linblog.space/tags/Facebook/"/>
     
-      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
       <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
     
   </entry>
   
@@ -304,9 +333,9 @@
       <category term="关键词广告" scheme="https://linblog.space/categories/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/%E5%85%B3%E9%94%AE%E8%AF%8D%E5%B9%BF%E5%91%8A/"/>
     
     
-      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
-    
       <category term="外贸营销" scheme="https://linblog.space/tags/%E5%A4%96%E8%B4%B8%E8%90%A5%E9%94%80/"/>
+    
+      <category term="B2B" scheme="https://linblog.space/tags/B2B/"/>
     
       <category term="P4P" scheme="https://linblog.space/tags/P4P/"/>
     

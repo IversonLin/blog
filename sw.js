@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019/10/18/一张纸解决一个项目，去芜存菁直面OGSM/');
+  precacheUrls.push('/2020/06/14/Facebook营销：挖掘与精准使用Facebook的兴趣人群/');
 
-  precacheUrls.push('/2020/03/14/Facebook广告指引与实操/');
+  precacheUrls.push('/2020/09/05/Google Ads 学习笔记系列：从广告观念到广告上线/');
 
   precacheUrls.push('/2020/03/21/全网营销运营，一个营销矩阵全搞定/');
 
-  precacheUrls.push('/2020/04/18/全网营销运营，创建适用于B2B用户的内容/');
+  precacheUrls.push('/2020/03/14/Facebook广告指引与实操/');
 
-  precacheUrls.push('/2020/06/14/Facebook营销：挖掘与精准使用Facebook的兴趣人群/');
+  precacheUrls.push('/2019/10/18/一张纸解决一个项目，去芜存菁直面OGSM/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
